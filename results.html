@@ -74,8 +74,13 @@
             color: #4f46e5;
         }
 
-        .possible {
+        .top-match {
             color: #16a34a;
+            font-weight: bold;
+        }
+
+        .possible {
+            color: #d97706;
             font-weight: bold;
         }
 
@@ -113,20 +118,22 @@
         </p>
 
         <div class="ai-status">
-            ✅ Visual similarity analysis completed
+            ✅ DINOv2 visual similarity analysis completed
         </div>
 
     </div>
 
     <div class="matches">
 
+        <!-- TOP MATCH -->
+
         <div class="match">
 
             <div>
-                <h3>📱 Calculator</h3>
+                <h3>🧮 Calculator</h3>
                 <p>Category: Electronics</p>
-                <p>Last seen: Library</p>
-                <p class="possible">Possible Match</p>
+                <p>Last seen: Block A</p>
+                <p class="top-match">⭐ Top AI Match</p>
             </div>
 
             <div class="score">
@@ -136,33 +143,19 @@
         </div>
 
 
-        <div class="match">
-
-            <div>
-                <h3>📱 Calculator</h3>
-                <p>Category: Electronics</p>
-                <p>Last seen: Block A</p>
-                <p class="possible">Possible Match</p>
-            </div>
-
-            <div class="score">
-                57.14%
-            </div>
-
-        </div>
-
+        <!-- SECOND MATCH -->
 
         <div class="match">
 
             <div>
-                <h3>📱 Calculator</h3>
+                <h3>🧮 Calculator</h3>
                 <p>Category: Electronics</p>
-                <p>Last seen: Classroom</p>
+                <p>Last seen: Classroom 204</p>
                 <p class="possible">Possible Match</p>
             </div>
 
             <div class="score">
-                48.32%
+                58.77%
             </div>
 
         </div>
@@ -170,9 +163,14 @@
     </div>
 
     <div class="verify">
-        🔐 <strong>Ownership Verification Required</strong><br><br>
-        A visual match is only a possible match.
+
+        🔐 <strong>Ownership Verification Required</strong>
+
+        <br><br>
+
+        A visual similarity result is only a possible match.
         The claimant must verify ownership before the item is returned.
+
     </div>
 
 </div>

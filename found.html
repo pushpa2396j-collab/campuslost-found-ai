@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Found Item - Campus Find</title>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: #111827;
+        }
+
+        p {
+            color: #6b7280;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+
+        .ai-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #eef2ff;
+            border-radius: 8px;
+            color: #3730a3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <h1>Report a Found Item</h1>
+
+    <p>
+        Upload a photo of the item you found.
+        Campus Find will search for visually similar lost-item reports.
+    </p>
+
+    <form onsubmit="submitFound(event)">
+
+        <label>Item Name</label>
+        <input type="text" placeholder="Example: Calculator" required>
+
+        <label>Category</label>
+        <select required>
+            <option value="">Select category</option>
+            <option>Electronics</option>
+            <option>ID Card</option>
+            <option>Books</option>
+            <option>Accessories</option>
+            <option>Stationery</option>
+            <option>Other</option>
+        </select>
+
+        <label>Upload Found Item Photo</label>
+        <input type="file" accept="image/*" required>
+
+        <label>Found Location</label>
+        <input type="text" placeholder="Example: College Library" required>
+
+        <label>Date Found</label>
+        <input type="date" required>
+
+        <label>Description</label>
+        <textarea placeholder="Describe the item or where you found it..."></textarea>
+
+        <div class="ai-box">
+            🤖 <strong>AI Visual Search:</strong><br>
+            The uploaded image will be compared with existing lost-item photos.
+        </div>
+
+        <button type="submit">
+            🔎 Search for Possible Matches
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+function submitFound(event) {
+    event.preventDefault();
+
+    alert(
+        "Found item uploaded successfully! 🔎\n\n" +
+        "AI is searching for visually similar lost items..."
+    );
+}
+
+</script>
+
+</body>
+</html>

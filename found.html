@@ -93,7 +93,7 @@
         Campus Find will search for visually similar lost-item reports.
     </p>
 
-    <form onsubmit="submitFound(event)">
+    <form onsubmit="window.location.href='results.html'; return false;">
 
         <label>Item Name</label>
         <input type="text" placeholder="Example: Calculator" required>
@@ -133,14 +133,6 @@
     </form>
 
 </div>
-
-<script>
-function submitFound(event) {
-    event.preventDefault();
-
-    window.location.href = "results.html";
-}
-</script>
 
 </body>
 </html>

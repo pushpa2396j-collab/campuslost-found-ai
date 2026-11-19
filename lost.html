@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item - Campus Find</title>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: #111827;
+        }
+
+        p {
+            color: #6b7280;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <h1>Report a Lost Item</h1>
+
+    <p>
+        Enter the details of your lost item. Our AI will
+        later use the uploaded image to find possible matches.
+    </p>
+
+    <form onsubmit="submitLost(event)">
+
+        <label>Item Name</label>
+        <input type="text" placeholder="Example: Calculator" required>
+
+        <label>Category</label>
+        <select required>
+            <option value="">Select category</option>
+            <option>Electronics</option>
+            <option>ID Card</option>
+            <option>Books</option>
+            <option>Accessories</option>
+            <option>Stationery</option>
+            <option>Other</option>
+        </select>
+
+        <label>Upload Item Photo</label>
+        <input type="file" accept="image/*" required>
+
+        <label>Last Seen Location</label>
+        <input type="text" placeholder="Example: Block A, Library" required>
+
+        <label>Date Lost</label>
+        <input type="date" required>
+
+        <label>Description</label>
+        <textarea placeholder="Describe the item..."></textarea>
+
+        <label>Contact Information</label>
+        <input type="text" placeholder="Email or phone number" required>
+
+        <button type="submit">
+            Submit Lost Item
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+function submitLost(event) {
+    event.preventDefault();
+
+    alert(
+        "Lost item reported successfully! 🚀\n\n" +
+        "AI matching will be performed when a similar found item is reported."
+    );
+}
+
+</script>
+
+</body>
+</html>

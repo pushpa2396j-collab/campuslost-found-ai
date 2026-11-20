@@ -105,7 +105,8 @@
 <body>
 
 <div class="container">
-
+<img id="foundPreview"
+     style="display:none; width:180px; height:180px; object-fit:cover; border-radius:12px; margin:0 auto 20px;">
     <a class="back" href="index.html">← Back to Home</a>
 
     <div class="header">
@@ -174,6 +175,15 @@
     </div>
 
 </div>
+<script>
+const foundImage = localStorage.getItem("foundImage");
 
+if (foundImage) {
+    const preview = document.getElementById("foundPreview");
+
+    preview.src = foundImage;
+    preview.style.display = "block";
+}
+</script>
 </body>
 </html>

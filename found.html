@@ -132,7 +132,29 @@
     </form>
 
 </div>
+<script>
+function searchFoundItem(event) {
+    event.preventDefault();
 
+    const imageInput = document.querySelector('input[type="file"]');
+
+    if (!imageInput.files.length) {
+        alert("Please upload a found-item image.");
+        return;
+    }
+
+    const file = imageInput.files[0];
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        localStorage.setItem("foundImage", e.target.result);
+        window.location.href = "results.html";
+    };
+
+    reader.readAsDataURL(file);
+}
+</script>
 </body>
 </html>
 </script>
